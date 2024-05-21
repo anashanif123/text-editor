@@ -1,13 +1,14 @@
 
 var inputText = document.getElementById('inputs');
+var textcolor = document.getElementById('textcolor')
 
 document.getElementById('bold').addEventListener('click', function() {
-    // var inputText = document.getElementById('inputs');
+   
     inputText.style.fontWeight = (inputText.style.fontWeight === 'bold'? 'normal' : 'bold');
   });
   
   document.getElementById('italic').addEventListener('click', function()  {
-    // var inputText = document.getElementById('inputs');
+   
     inputText.style.fontStyle = (inputText.style.fontStyle === 'italic'? 'normal' : 'italic');
   });
   
@@ -16,21 +17,19 @@ document.getElementById('bold').addEventListener('click', function() {
   });
   
   document.getElementById('fontsize').addEventListener('click', function()  {
-    // var inputText = document.getElementById('inputs');
+  
     var fontSize = document.getElementById('sizes').value;
     inputText.style.fontSize = fontSize;
   });
   
   document.getElementById('fontfamily').addEventListener('click',function ()  {
-    // var inputText = document.getElementById('inputs');
+   
     var fontFamily = document.getElementById('fontfamilies').value;
     inputText.style.fontFamily = fontFamily;
   });
   
-  document.getElementById('textcolor').addEventListener('click',function ()  {
-    var inputText = document.getElementById('inputs');
-    var colorPicker = document.getElementById('textcolor').children[0];
-    inputText.style.color = colorPicker.value;
+textcolor.addEventListener("input", function () {
+  inputText.style.color = textcolor.value;
 });
 document.getElementById('clear').addEventListener('click', function() {
   var inputText = document.getElementById('inputs');
